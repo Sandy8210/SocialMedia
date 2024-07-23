@@ -74,7 +74,7 @@ a {
   background-color: var(--primary-color);
   border: none;
   padding: 0.7rem;
-  font-size: 1.7rem;
+  font-size: 1rem;
   border-radius: 4px;
   color: var(--white-color);
   cursor: pointer;
@@ -138,9 +138,20 @@ nav ul li > a::after {
   opacity: 0;
 }
 
+nav ul li a:hover {
+  color: #000;
+}
+
 nav ul li > a:hover::after {
   width: 100%;
   opacity: 1;
+}
+
+.btn {
+  font-size: 1.3rem;
+  color: var(--white-color);
+  cursor: pointer;
+  display: none;
 }
 
 /* nav ul li::before {
@@ -203,7 +214,7 @@ main {
 }
 
 .img__overlay h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--white-color);
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -242,6 +253,11 @@ main {
   }
 }
 
+.img__overlay h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white-color);
+}
+
 /* ! SEARCH */
 
 #location__search {
@@ -249,9 +265,13 @@ main {
 }
 
 .form__wrapper {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   width: 100%;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
 }
 
 form {
@@ -268,7 +288,7 @@ form input,
 select {
   padding: 0.6rem;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #000;
   border: 1px solid var(--light-gray-color);
   margin: 0 0.4rem;
