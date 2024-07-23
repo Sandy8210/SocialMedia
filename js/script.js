@@ -20,3 +20,29 @@ window.addEventListener("scroll", () => {
     header.classList.remove("sticky");
   }
 });
+
+// ! STATIC NUMBERS
+
+const counters = document.querySelectorAll(".numbers");
+
+counters.forEach((counter) => {
+  counter.textContent = 0;
+
+  incrementCounters();
+
+  function incrementCounters() {
+    let currentNum = +counter.textContent;
+    const dataCeil = counter.getAttribute("data-ceil");
+
+    const increment = dataCeil / 25;
+
+    currentNum = Math.ceil(currentNum + increment);
+
+    if (currentNum < dataCeil) {
+      counter.textContent = currentNum;
+      setTimeout(incrementCounters, 70);
+    } else {
+      counter.textContent = dataCeil;
+    }
+  }
+});

@@ -444,7 +444,56 @@ select {
 /* ! STATIC COUNTER */
 
 #static__counter {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background: url("../assets/beach_view.jpg") no-repeat center center/cover;
   background-attachment: fixed;
+  position: relative;
+  z-index: 4;
+}
+
+#static__counter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.static__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+.static__icons {
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.static__icons i {
+  font-size: 2.3rem;
+  border-radius: 50%;
+  padding: 2rem;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.numbers {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.static__icons i:hover {
+  background: var(--primary-color);
+  border: none;
+  transform: translateY(-20%);
 }
