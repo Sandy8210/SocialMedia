@@ -46,7 +46,7 @@ a {
 }
 
 .headings {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-family: "Ubuntu", sans-serif;
   padding-bottom: 2rem;
   letter-spacing: 2px;
@@ -57,13 +57,13 @@ a {
 }
 
 .secondary__headings {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-family: "Ubuntu", sans-serif;
   padding: 1rem 0;
 }
 
 .lead {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   line-height: 2;
   text-align: justify;
 }
@@ -83,12 +83,17 @@ a {
 /* ! HEADER */
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 6;
   width: 100%;
   height: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+header.sticky {
+  background: rgba(255, 255, 255, 0.9);
 }
 .logo {
   padding: 1rem;
@@ -293,4 +298,71 @@ select {
   border: 1px solid var(--light-gray-color);
   margin: 0 0.4rem;
   border-radius: 4px;
+}
+
+/* ! ABOUT */
+
+.about__content__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  margin: 3rem 0;
+  align-items: center;
+}
+
+.about__content__container h2 {
+  display: inline-block;
+  position: relative;
+}
+
+.about__content__container h2 span {
+  color: transparent;
+  font-family: "ubuntu", sans-serif;
+  -webkit-text-stroke: 1px var(--primary-color);
+}
+
+/* .about__content__container h2::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background: var(--span-color);
+  left: 0;
+} */
+
+.about__content__container ul {
+  list-style: none;
+}
+
+.about__content__container ul .icons {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.about__content__container ul .icons i {
+  padding: 0.5rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  color: var(--white-color);
+}
+
+.about__content__container ul p {
+  margin-left: 1rem;
+}
+
+.agency__right__side .img {
+  position: relative;
+}
+.agency__right__side .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.agency__right__side .img:hover {
+  transform: scale(0.95);
 }

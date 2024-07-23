@@ -10,3 +10,13 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   menus.classList.remove("display");
 });
+
+// ! SCROLL STICKY NAVBAR
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 20) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
