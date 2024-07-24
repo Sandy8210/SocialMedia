@@ -26,6 +26,7 @@ html {
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
+  overflow: hidden;
 }
 
 img {
@@ -496,4 +497,68 @@ select {
   background: var(--primary-color);
   border: none;
   transform: translateY(-20%);
+}
+
+/* ! TOP DESTINATION */
+
+#top__destination {
+  padding: 6rem 0;
+}
+
+.top__destination__wrapper {
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel__img__overlay {
+  width: 100%;
+}
+
+.hidden__content__carousel {
+  padding: 0.5rem 2rem;
+  color: var(--white-color);
+  transform: translateY(120%);
+  transition: all 0.5s ease-in-out;
+}
+
+.hidden__content__carousel a > span,
+i {
+  color: var(--light-gray-color);
+}
+
+.carousel__img__overlay i {
+  padding-right: 1rem;
+}
+
+.carousel:hover .hidden__content__carousel {
+  transform: translateY(0);
+}
+
+.carousel:hover {
+  transform: scale(1.01);
+}
+
+.price__label2 {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: rotate(-90deg);
 }
