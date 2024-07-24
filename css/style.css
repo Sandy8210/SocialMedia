@@ -39,6 +39,9 @@ img {
 a {
   text-decoration: none;
 }
+i {
+  color: #000;
+}
 
 .heading__normal__text {
   font-size: 1rem;
